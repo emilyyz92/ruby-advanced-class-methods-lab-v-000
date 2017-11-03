@@ -49,7 +49,7 @@ class Song
 
   def self.new_from_filename(file_name)
     song_array = file_name.split(" - ")
-    new_song = Song.new_by_name(song_array[1].delete!(/\.+m+p+3/))
+    new_song = Song.new_by_name(song_array[1].slice!".mp3"
     new_song.artist_name = song_array[0]
     new_song
   end
