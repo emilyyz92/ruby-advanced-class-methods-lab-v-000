@@ -44,9 +44,6 @@ class Song
   end
 
   def self.alphabetical
-    name_array = Song.all.collect do |songs|
-      songs.name
-    end
-    name_array.sort_by {|names|names[0]}
+    Song.all.sort_by {|songID|songID.name}
   end
 end
