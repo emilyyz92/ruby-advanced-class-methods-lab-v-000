@@ -52,5 +52,5 @@ class Song
     new_song = Song.new
     new_song.name = song_array[1].delete!(".mp3")
     new_song.artist_name = song_array[0]
-
+  end
 end
