@@ -58,5 +58,8 @@ class Song
   def self.create_from_filename(file_name)
     song_array = file_name.split(" - ")
     song_array[1].slice!".mp3"
-    Song.create_by_name(song_array[1])
+    new_song = Song.create_by_name(song_array[1])
+    new_song.artist_name = song_array[0]
+    new_song
+  end
 end
