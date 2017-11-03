@@ -48,4 +48,5 @@ class Song
       songs.name
     end
     name_array.sort_by {|names|names[0]}
+  end
 end
