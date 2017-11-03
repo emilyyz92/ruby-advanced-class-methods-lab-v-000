@@ -42,4 +42,9 @@ class Song
       Song.create_by_name(fc_name)
     end
   end
+
+  def self.alphabetical
+    Song.all.collect do |songs|
+      songs.name
+    end
 end
